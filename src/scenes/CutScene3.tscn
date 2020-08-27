@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/scenes/CutScene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Label.gd" type="Script" id=2]
+[ext_resource path="res://src/Label.gd" type="Script" id=2]
 [ext_resource path="res://assets/img/slides/slide5.jpg" type="Texture" id=3]
+
 
 [node name="CutScene" instance=ExtResource( 1 )]
 music = "res://assets/bgm/14_players_score_125.ogg"

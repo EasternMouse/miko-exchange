@@ -1,6 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Firework.gd" type="Script" id=1]
+[ext_resource path="res://src/Firework.gd" type="Script" id=1]
+
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0.00265252, 0.990909 ), 0.0, 0.0, 0, 0, Vector2( 0.0385757, 0.804545 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.169479 ), 0.0, 0.0, 0, 0 ]
