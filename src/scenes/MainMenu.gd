@@ -66,7 +66,7 @@ func _on_ButtonSound_pressed():
 	load_text()
 
 
-func _input(event):
+func _input(_event):
 	if (Input.is_action_just_pressed("ui_down")
 			or Input.is_action_just_pressed("ui_up")
 			or Input.is_action_just_pressed("ui_right")
