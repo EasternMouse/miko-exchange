@@ -1,0 +1,24 @@
+keys,en,ja
+NAME,Miko Exchange!,Miko Exchange!
+START,Start,初めから
+SKIP_INTRO,Skip Intro,イントロをスキップ
+LANGUAGE,日本語こちら,English here
+EXIT,Exit,終了
+SCORE,Score: ,スコア :
+PAUSE,Pause,一時停止
+GAME_OVER,Game over,ゲームオーバー
+RETRY,Retry,リトライ
+CONTINUE,Continue,コンティニュー
+MAIN_MENU,Main Menu,タイトルへ
+CREDITS_GAME,Game by EasternMouse,ゲーム : EasternMouse
+CREDITS_MUSIC,no bgm,no bgm
+CONTROLS_MOVEMENT,Arrow keys : movement,方向キー : 移動
+CONTROLS_SHOOT,Z : Shoot,Z : ショット
+CONTROLS_BURST,Z (release) : Burst fire,Z（離す） : バースト
+CONTROLS_FOCUS,Shift : Slow moving,Shift : 低速移動
+CONTROLS_CIRCLE,Fly around the gate in a circle to seal it,門の周りを円で絵がくと封印できます
+CONTROLS_MENU,Esc : Menu,Esc : メニュー
+CONTROLS_NEXT,Z : Next,Z : 次へ
+VICTORY,Victory,人生の勝利者
+DESCRIPTION,"Annual Hakurei Shrine Grand Festival is coming, but Reimu became sick. Help Marisa in conducting festival instead of Reimu, but watch out for evil forces, waiting to invade the festival grounds!",
+CONTROL_DESCRIPTION,"Arrow keys : movement, Z : Shoot, Esc : Menu",方向キー : 移動、Z : ショット、Esc : メニュー

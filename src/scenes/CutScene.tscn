@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/scenes/CutScene.gd" type="Script" id=2]
+[ext_resource path="res://assets/img/slides/slide2.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/img/slides/slide1.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/img/slides/slide3.jpg" type="Texture" id=5]
+[ext_resource path="res://assets/img/slides/slide4.jpg" type="Texture" id=6]
+[ext_resource path="res://src/scenes/Slide.gd" type="Script" id=7]
+
+[node name="CutScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene = "res://src/scenes/TutorialGameScene.tscn"
+
+[node name="Slides" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Slide4" type="TextureRect" parent="Slides"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -98.0
+margin_bottom = 32.0
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="ChangeSceneIndicator" type="Control" parent="Slides/Slide4"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slide3" type="TextureRect" parent="Slides"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -98.0
+margin_bottom = 31.0
+texture = ExtResource( 5 )
+script = ExtResource( 7 )
+
+[node name="Slide2" type="TextureRect" parent="Slides"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -76.0
+margin_bottom = 53.0
+texture = ExtResource( 3 )
+script = ExtResource( 7 )
+
+[node name="Slide" type="TextureRect" parent="Slides"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -76.0
+margin_bottom = 53.0
+texture = ExtResource( 4 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.75
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Z : Next"
+align = 1
+valign = 1

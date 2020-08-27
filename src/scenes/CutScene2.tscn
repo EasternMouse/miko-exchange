@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/scenes/CutScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/img/slides/slide8.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/img/slides/slide5.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/img/slides/slide7.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/img/slides/slide6.jpg" type="Texture" id=5]
+
+[node name="CutScene2" instance=ExtResource( 1 )]
+next_scene = "res://src/scenes/GameScene.tscn"
+
+[node name="Slide4" parent="Slides" index="0"]
+margin_top = -58.0
+margin_bottom = 72.0
+texture = ExtResource( 2 )
+
+[node name="Slide3" parent="Slides" index="1"]
+margin_top = -58.0
+margin_bottom = 79.0
+texture = ExtResource( 4 )
+
+[node name="Slide2" parent="Slides" index="2"]
+margin_top = -125.947
+margin_bottom = 10.0533
+texture = ExtResource( 5 )
+
+[node name="Slide" parent="Slides" index="3"]
+margin_top = -104.284
+margin_bottom = 25.7157
+texture = ExtResource( 3 )

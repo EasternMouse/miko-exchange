@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/scenes/CutScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Label.gd" type="Script" id=2]
+[ext_resource path="res://assets/img/slides/slide5.jpg" type="Texture" id=3]
+
+[node name="CutScene" instance=ExtResource( 1 )]
+music = "res://assets/bgm/14_players_score_125.ogg"
+next_scene = "res://src/scenes/MainMenu.tscn"
+
+[node name="Slide4" parent="Slides" index="0"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="Slide3" parent="Slides" index="1"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="Slide2" parent="Slides" index="2"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="Slide" parent="Slides" index="3"]
+texture = ExtResource( 3 )
+
+[node name="ChangeSceneIndicator" type="Control" parent="Slides/Slide" index="0"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Slides" index="4"]
+anchor_right = 1.0
+margin_bottom = 139.0
+text = "You win"
+align = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/ButtonChangeScene.gd" type="Script" id=1]
+
+[node name="ButtonChangeScene" type="Button"]
+margin_top = 448.0
+margin_right = 1536.0
+margin_bottom = 640.0
+mouse_filter = 2
+size_flags_vertical = 3
+text = "Start"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_ButtonChangeScene_pressed"]
