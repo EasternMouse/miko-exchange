@@ -14,7 +14,7 @@ radius = 40.8737
 [sub_resource type="CircleShape2D" id=2]
 radius = 7.0
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=3]
 resource_name = "die"
 tracks/0/type = "value"
 tracks/0/path = NodePath("RotationHelper/Sprite:rotation_degrees")
@@ -41,8 +41,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( -200, 600 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "shoot"
+[sub_resource type="Animation" id=4]
 length = 0.1
 loop = true
 tracks/0/type = "method"
@@ -60,8 +59,7 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "shoot_fire"
+[sub_resource type="Animation" id=5]
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -113,18 +111,18 @@ tracks/3/keys = {
 "values": [ Color( 1, 0, 0, 1 ), Color( 0, 1, 0.156863, 1 ) ]
 }
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 1, 0, 0, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=6]
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=8]
 size = 60
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 resource_name = "heal"
 length = 0.3
 tracks/0/type = "value"
@@ -140,8 +138,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0, 0, 0 ), Color( 0, 1, 1, 0.196078 ), Color( 1, 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "hurt"
+[sub_resource type="Animation" id=10]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Damage:color")
@@ -228,9 +225,9 @@ drag_margin_right = 0.05
 drag_margin_bottom = 0.05
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/die = SubResource( 8 )
-anims/shoot = SubResource( 3 )
-anims/shoot_fire = SubResource( 4 )
+anims/die = SubResource( 3 )
+anims/shoot = SubResource( 4 )
+anims/shoot_fire = SubResource( 5 )
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 visible = false
@@ -238,8 +235,8 @@ margin_left = -64.0
 margin_top = -64.0
 margin_right = 64.0
 margin_bottom = -50.0
-custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
 value = 100.0
 percent_visible = false
 __meta__ = {
@@ -289,14 +286,14 @@ __meta__ = {
 margin_left = 843.0
 margin_right = 1040.0
 margin_bottom = 85.0
-custom_fonts/font = SubResource( 7 )
-text = "Score: "
+custom_fonts/font = SubResource( 8 )
+text = "SCORE"
 
 [node name="Label2" type="Label" parent="CanvasLayer/UI/Score"]
 margin_left = 1044.0
 margin_right = 1077.0
 margin_bottom = 85.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "0"
 
 [node name="Damage" type="ColorRect" parent="CanvasLayer/UI"]
@@ -308,8 +305,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/UI"]
-anims/heal = SubResource( 10 )
-anims/hurt = SubResource( 9 )
+anims/heal = SubResource( 9 )
+anims/hurt = SubResource( 10 )
 
 [node name="Arrows" type="Node2D" parent="."]
 

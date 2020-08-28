@@ -4,7 +4,6 @@
 [ext_resource path="res://src/Label.gd" type="Script" id=2]
 [ext_resource path="res://assets/img/slides/slide5.jpg" type="Texture" id=3]
 
-
 [node name="CutScene" instance=ExtResource( 1 )]
 music = "res://assets/bgm/14_players_score_125.ogg"
 next_scene = "res://src/scenes/MainMenu.tscn"
@@ -31,7 +30,7 @@ margin_bottom = 40.0
 [node name="Label" type="Label" parent="Slides" index="4"]
 anchor_right = 1.0
 margin_bottom = 139.0
-text = "You win"
+text = "VICTORY"
 align = 1
 script = ExtResource( 2 )
 __meta__ = {

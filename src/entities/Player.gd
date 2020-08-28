@@ -43,11 +43,6 @@ onready var animation_player := $AnimationPlayer
 
 func _ready():
 	node_bullets = get_tree().get_nodes_in_group("node_bullets")[0]
-	set_text()
-
-
-func set_text():
-	$CanvasLayer/UI/Score/Label.text = tr("SCORE")
 
 
 func _unhandled_key_input(_event):

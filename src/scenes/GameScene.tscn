@@ -116,7 +116,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="DeathScreen/ColorRect/MarginContainer/VBoxContainer"]
 margin_right = 1152.0
 margin_bottom = 139.0
-text = "Game Over"
+text = "GAME_OVER"
 align = 1
 
 [node name="Control" type="Control" parent="DeathScreen/ColorRect/MarginContainer/VBoxContainer"]
@@ -130,7 +130,7 @@ margin_top = 203.0
 margin_right = 1152.0
 margin_bottom = 342.0
 focus_neighbour_bottom = NodePath("../ButtonMainMenu")
-text = "Retry"
+text = "RETRY"
 path = "res://src/scenes/GameScene.tscn"
 
 [node name="ButtonMainMenu" parent="DeathScreen/ColorRect/MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
@@ -138,7 +138,7 @@ margin_top = 374.0
 margin_right = 1152.0
 margin_bottom = 513.0
 focus_neighbour_top = NodePath("../ButtonRetry")
-text = "Main menu"
+text = "MAIN_MENU"
 path = "res://src/scenes/MainMenu.tscn"
 
 [node name="PauseScreen" type="CanvasLayer" parent="."]
@@ -175,14 +175,14 @@ __meta__ = {
 [node name="Label" type="Label" parent="PauseScreen/ColorRect/MarginContainer/VBoxContainer"]
 margin_right = 1152.0
 margin_bottom = 139.0
-text = "Pause"
+text = "PAUSE"
 align = 1
 
 [node name="ButtonContinue" type="Button" parent="PauseScreen/ColorRect/MarginContainer/VBoxContainer"]
 margin_top = 171.0
 margin_right = 1152.0
 margin_bottom = 310.0
-text = "Continue"
+text = "CONTINUE"
 
 [node name="ButtonRetry" parent="PauseScreen/ColorRect/MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
 margin_top = 342.0
@@ -190,7 +190,7 @@ margin_right = 1152.0
 margin_bottom = 481.0
 focus_neighbour_top = NodePath("../ButtonContinue")
 focus_neighbour_bottom = NodePath("../ButtonMainMenu")
-text = "Retry"
+text = "RETRY"
 path = "res://src/scenes/GameScene.tscn"
 
 [node name="ButtonMainMenu" parent="PauseScreen/ColorRect/MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
@@ -198,7 +198,7 @@ margin_top = 513.0
 margin_right = 1152.0
 margin_bottom = 652.0
 focus_neighbour_top = NodePath("../ButtonRetry")
-text = "Main menu"
+text = "MAIN_MENU"
 path = "res://src/scenes/MainMenu.tscn"
 
 [node name="Tutorial" type="CanvasLayer" parent="."]

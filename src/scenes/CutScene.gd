@@ -6,8 +6,6 @@ export var next_scene:String = ""
 onready var slides = $Slides
 
 func _ready():
-	$Panel/Label.text = tr("CONTROLS_NEXT")
-	
 	if music != "":
 		BgmControl.start_playing(music)
 

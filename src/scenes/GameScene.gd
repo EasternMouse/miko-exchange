@@ -12,8 +12,6 @@ func _ready():
 	
 	var player = get_tree().get_nodes_in_group("player")[0]
 	player.connect("player_died", self, "on_player_death")
-	
-	set_text()
 
 
 func _unhandled_input(_event):
@@ -76,17 +74,6 @@ func on_player_death():
 	$DeathScreen/ColorRect.visible = true
 	get_tree().paused = true
 	$DeathScreen/ColorRect/MarginContainer/VBoxContainer/ButtonRetry.grab_focus()
-
-
-func set_text():
-	$DeathScreen/ColorRect/MarginContainer/VBoxContainer/Label.text = tr("GAME_OVER")
-	$DeathScreen/ColorRect/MarginContainer/VBoxContainer/ButtonRetry.text = tr("RETRY")
-	$DeathScreen/ColorRect/MarginContainer/VBoxContainer/ButtonMainMenu.text = tr("MAIN_MENU")
-	
-	$PauseScreen/ColorRect/MarginContainer/VBoxContainer/Label.text = tr("PAUSE")
-	$PauseScreen/ColorRect/MarginContainer/VBoxContainer/ButtonContinue.text = tr("CONTINUE")
-	$PauseScreen/ColorRect/MarginContainer/VBoxContainer/ButtonRetry.text = tr("RETRY")
-	$PauseScreen/ColorRect/MarginContainer/VBoxContainer/ButtonMainMenu.text = tr("MAIN_MENU")
 
 func _on_ButtonContinue_pressed():
 	$PauseScreen/ColorRect.visible = false
