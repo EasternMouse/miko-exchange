@@ -7,6 +7,7 @@ var sounds = {
 	"start" : preload("res://assets/se/start.wav"),
 	}
 
+
 func _ready():
 	$MarginContainer/VBoxContainer/ButtonStart.grab_focus()
 	BgmControl.start_playing(music)
