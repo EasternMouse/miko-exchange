@@ -77,4 +77,5 @@ func load_text():
 
 
 func _on_ButtonCreditsMusic_pressed():
-	OS.shell_open("https://soundcloud.com/frogmask")
+	if OS.shell_open("https://soundcloud.com/frogmask") != OK:
+		print("Can't open website!")
