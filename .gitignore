@@ -7,3 +7,7 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+
+# music for now
+Casket_of_Star__Astral_Burial.ogg
+Mound_of_Life.ogg
