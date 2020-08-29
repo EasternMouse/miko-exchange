@@ -4,14 +4,14 @@ START,Start,初めから
 SKIP_INTRO,Skip Intro,イントロをスキップ
 LANGUAGE,日本語こちら,English here
 EXIT,Exit,終了
-SCORE,Score: ,スコア :
+SCORE,Score: ,スコア : 
 PAUSE,Pause,一時停止
 GAME_OVER,Game over,ゲームオーバー
 RETRY,Retry,リトライ
 CONTINUE,Continue,コンティニュー
 MAIN_MENU,Main Menu,タイトルへ
 CREDITS_GAME,Game by EasternMouse,ゲーム : EasternMouse
-CREDITS_MUSIC,no bgm,no bgm
+CREDITS_MUSIC,Music by Frogmask (visit SoundCloud),音楽 : Frogmask (SoundCloudへ)
 CONTROLS_MOVEMENT,Arrow keys : movement,方向キー : 移動
 CONTROLS_SHOOT,Z : Shoot,Z : ショット
 CONTROLS_BURST,Z (release) : Burst fire,Z（離す） : バースト
@@ -20,5 +20,5 @@ CONTROLS_CIRCLE,Fly around the gate in a circle to seal it,門の周りを円で
 CONTROLS_MENU,Esc : Menu,Esc : メニュー
 CONTROLS_NEXT,Z : Next,Z : 次へ
 VICTORY,Victory,人生の勝利者
-DESCRIPTION,"Annual Hakurei Shrine Grand Festival is coming, but Reimu became sick. Help Marisa in conducting festival instead of Reimu, but watch out for evil forces, waiting to invade the festival grounds!",
+DESCRIPTION,"Annual Hakurei Shrine Grand Festival is coming, but Reimu became sick. Help Marisa in conducting festival instead of Reimu, but watch out for evil forces, waiting to invade the festival grounds!",いよいよ一年一度の博麗大祭りの開催日なんですが、霊夢さんが謎の病気にかかって再起不能になってしまった！魔理沙さんを操作して祭りを悪の手から守りましょう！
 CONTROL_DESCRIPTION,"Arrow keys : movement, Z : Shoot, Esc : Menu",方向キー : 移動、Z : ショット、Esc : メニュー

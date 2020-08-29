@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Casket_of_Star__Astral_Burial.ogg-5dce7066a681966d2e918f8d6cf20d44.oggstr"
+
+[deps]
+
+source_file="res://assets/bgm/Casket_of_Star__Astral_Burial.ogg"
+dest_files=[ "res://.import/Casket_of_Star__Astral_Burial.ogg-5dce7066a681966d2e918f8d6cf20d44.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

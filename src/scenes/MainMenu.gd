@@ -9,7 +9,7 @@ var sounds = {
 
 func _ready():
 	$MarginContainer/VBoxContainer/ButtonStart.grab_focus()
-	#BgmControl.start_playing("res://assets/bgm/03_haruirokomichi_154.ogg")
+	BgmControl.start_playing(music)
 
 
 func _input(_event):
@@ -35,7 +35,7 @@ func _on_ButtonLanguage_pressed():
 func _on_ButtonMusic_pressed():
 	BgmControl.option_music = not BgmControl.option_music
 	if BgmControl.option_music:
-		#BgmControl.start_playing("res://assets/bgm/03_haruirokomichi_154.ogg")
+		BgmControl.start_playing(music)
 		pass
 	else:
 		BgmControl.start_playing("")
@@ -47,7 +47,7 @@ func _on_ButtonMusic_pressed():
 func _on_ButtonSound_pressed():
 	BgmControl.option_sound = not BgmControl.option_sound
 	if BgmControl.option_sound:
-		#BgmControl.start_playing("res://assets/bgm/03_haruirokomichi_154.ogg")
+		BgmControl.start_playing(music)
 		pass
 	else:
 		BgmControl.start_playing("")
@@ -72,3 +72,7 @@ func load_text():
 		$MarginContainer/VBoxContainer/HBoxContainer/ButtonSound.text = ("SE : " + "On")
 	else:
 		$MarginContainer/VBoxContainer/HBoxContainer/ButtonSound.text = ("SE : " + "Off")
+
+
+func _on_ButtonCreditsMusic_pressed():
+	OS.shell_open("https://soundcloud.com/frogmask")

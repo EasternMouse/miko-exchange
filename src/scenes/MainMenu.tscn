@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/img/background/Background/Sky(1.1).png" type="Texture" id=2]
 [ext_resource path="res://src/ButtonChangeScene.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/scenes/MainMenu.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/img/Globe.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -20,6 +21,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+music = "res://assets/bgm/Mound_of_Life.ogg"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -67,22 +69,22 @@ __meta__ = {
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
 margin_top = 171.0
 margin_right = 1728.0
-margin_bottom = 186.0
+margin_bottom = 176.0
 size_flags_vertical = 3
 
 [node name="ButtonStart" parent="MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 218.0
+margin_top = 208.0
 margin_right = 1728.0
-margin_bottom = 357.0
+margin_bottom = 347.0
 focus_neighbour_bottom = NodePath("../ButtonSkipIntro")
 size_flags_vertical = 1
 text = "START"
 path = "res://src/scenes/CutScene.tscn"
 
 [node name="ButtonSkipIntro" parent="MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 389.0
+margin_top = 379.0
 margin_right = 1728.0
-margin_bottom = 528.0
+margin_bottom = 518.0
 focus_neighbour_top = NodePath("../ButtonStart")
 focus_neighbour_bottom = NodePath("../HBoxContainer/ButtonSound")
 size_flags_vertical = 1
@@ -90,9 +92,9 @@ text = "SKIP_INTRO"
 path = "res://src/scenes/GameScene.tscn"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 560.0
+margin_top = 550.0
 margin_right = 1728.0
-margin_bottom = 699.0
+margin_bottom = 689.0
 custom_constants/separation = 32
 alignment = 1
 
@@ -129,40 +131,42 @@ size_flags_horizontal = 3
 text = "LANGUAGE"
 
 [node name="ButtonExit" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 731.0
+margin_top = 721.0
 margin_right = 1728.0
-margin_bottom = 870.0
+margin_bottom = 860.0
 focus_neighbour_top = NodePath("../HBoxContainer/ButtonSound")
 mouse_filter = 2
 text = "EXIT"
 
 [node name="Credits" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 902.0
+margin_top = 892.0
 margin_right = 1728.0
 margin_bottom = 972.0
 alignment = 1
 
-[node name="LabelGame" type="Button" parent="MarginContainer/VBoxContainer/Credits"]
+[node name="ButtonCreditsGame" type="Button" parent="MarginContainer/VBoxContainer/Credits"]
 margin_right = 441.0
-margin_bottom = 70.0
+margin_bottom = 80.0
 custom_fonts/font = SubResource( 1 )
 text = "CREDITS_GAME"
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Credits"]
 margin_left = 445.0
-margin_right = 1269.0
-margin_bottom = 70.0
+margin_right = 1187.0
+margin_bottom = 80.0
 size_flags_horizontal = 3
 
-[node name="LabelMusic" type="Button" parent="MarginContainer/VBoxContainer/Credits"]
-margin_left = 1273.0
+[node name="ButtonCreditsMusic" type="Button" parent="MarginContainer/VBoxContainer/Credits"]
+margin_left = 1191.0
 margin_right = 1728.0
-margin_bottom = 70.0
+margin_bottom = 80.0
 custom_fonts/font = SubResource( 1 )
 text = "CREDITS_MUSIC"
+icon = ExtResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonSound" to="." method="_on_ButtonSound_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic" to="." method="_on_ButtonMusic_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonLanguage" to="." method="_on_ButtonLanguage_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonExit" to="." method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits/ButtonCreditsMusic" to="." method="_on_ButtonCreditsMusic_pressed"]

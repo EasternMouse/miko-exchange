@@ -3,6 +3,7 @@
 [ext_resource path="res://src/scenes/GameScene.tscn" type="PackedScene" id=1]
 
 [node name="TutorialGameScene" instance=ExtResource( 1 )]
+music = "stop"
 
 [node name="Director" parent="." index="2"]
 is_tutorial = true

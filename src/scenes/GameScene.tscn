@@ -19,12 +19,15 @@ extents = Vector2( 29.3654, 1116.47 )
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource( 6 )
+music = "res://assets/bgm/Casket_of_Star__Astral_Burial.ogg"
 
 [node name="Trail" type="Line2D" parent="."]
 width = 50.0
 width_curve = SubResource( 1 )
 default_color = Color( 0.45098, 0, 0, 0.470588 )
-joint_mode = 1
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="Walls" type="Node2D" parent="."]
 

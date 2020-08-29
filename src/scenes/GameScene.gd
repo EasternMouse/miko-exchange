@@ -1,17 +1,14 @@
 extends Node2D
 
 onready var trail = $Trail
+onready var player = get_tree().get_nodes_in_group("player")[0]
+
+export(String, FILE) var music = ""
 
 func _ready():
-	if self.name == "TutorialGameScene":
-		#BgmControl.start_playing("res://assets/bgm/01_shoujo_kisoukyoku_171.ogg")
-		pass
-	else:
-		#BgmControl.start_playing("res://assets/bgm/02_koiiro_fms_167.ogg")
-		pass
 	
-	var player = get_tree().get_nodes_in_group("player")[0]
-	player.connect("player_died", self, "on_player_death")
+	
+	BgmControl.start_playing(music)
 
 
 func _unhandled_input(_event):
@@ -22,7 +19,7 @@ func _unhandled_input(_event):
 
 
 func _physics_process(_delta):
-	trail.add_point($Player.global_position)
+	trail.add_point(player.global_position)
 	if trail.get_point_count() > 100:
 		trail.remove_point(0)
 	var end0 = trail.points[trail. get_point_count()-1]
