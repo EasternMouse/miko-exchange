@@ -12,6 +12,7 @@ CONTINUE,Continue,コンティニュー
 MAIN_MENU,Main Menu,タイトルへ
 CREDITS_GAME,Game by EasternMouse,ゲーム : EasternMouse
 CREDITS_MUSIC,Music by Frogmask (visit SoundCloud),音楽 : Frogmask (SoundCloudへ)
+CONTROLS_FULLSCREEN,Alt+Enter : fullscreen,Alt+Enter : 全画面
 CONTROLS_MOVEMENT,Arrow keys : movement,方向キー : 移動
 CONTROLS_SHOOT,Z : Shoot,Z : ショット
 CONTROLS_BURST,Z (release) : Burst fire,Z（離す） : バースト
