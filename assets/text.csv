@@ -1,10 +1,12 @@
 keys,en,ja
 NAME,Miko Exchange!,Miko Exchange!
+ON,On,はい
+OFF,Off,いいえ
 START,Start,初めから
 SKIP_INTRO,Skip Intro,イントロをスキップ
 LANGUAGE,日本語こちら,English here
 EXIT,Exit,終了
-SCORE,Score: ,スコア : 
+SCORE,Score: ,スコア :
 PAUSE,Pause,一時停止
 GAME_OVER,Game over,ゲームオーバー
 RETRY,Retry,リトライ

@@ -12,7 +12,7 @@ bg_color = Color( 0.803922, 0.301961, 0.301961, 1 )
 bg_color = Color( 0.486275, 0.4, 0.4, 1 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 100
+size = 96
 font_data = ExtResource( 1 )
 
 [resource]

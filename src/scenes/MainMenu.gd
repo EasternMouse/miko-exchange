@@ -11,7 +11,7 @@ var sounds = {
 func _ready():
 	$MarginContainer/VBoxContainer/ButtonStart.grab_focus()
 	BgmControl.start_playing(music)
-
+	load_text()
 
 func _input(_event):
 	if (Input.is_action_just_pressed("ui_down")
@@ -32,7 +32,7 @@ func _on_ButtonLanguage_pressed():
 		TranslationServer.set_locale("ja")
 	else:
 		TranslationServer.set_locale("en")
-
+	load_text()
 
 func _on_ButtonMusic_pressed():
 	BgmControl.option_music = not BgmControl.option_music
@@ -66,16 +66,17 @@ func play_sound(sound):
 
 func load_text():
 	if BgmControl.option_music:
-		$MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic.text = ("BGM : " + "On")
+		$MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic.text = ("BGM : " + tr("ON"))
 	else:
-		$MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic.text = ("BGM : " + "Off")
+		$MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic.text = ("BGM : " + tr("OFF"))
 	
 	if BgmControl.option_sound:
-		$MarginContainer/VBoxContainer/HBoxContainer/ButtonSound.text = ("SE : " + "On")
+		$MarginContainer/VBoxContainer/HBoxContainer/ButtonSound.text = ("SE : " + tr("ON"))
 	else:
-		$MarginContainer/VBoxContainer/HBoxContainer/ButtonSound.text = ("SE : " + "Off")
+		$MarginContainer/VBoxContainer/HBoxContainer/ButtonSound.text = ("SE : " + tr("OFF"))
 
 
 func _on_ButtonCreditsMusic_pressed():
+	OS.window_fullscreen = false
 	if OS.shell_open("https://soundcloud.com/frogmask") != OK:
 		print("Can't open website!")
