@@ -32,6 +32,7 @@ func _on_ButtonLanguage_pressed():
 	else:
 		TranslationServer.set_locale("en")
 
+
 func _on_ButtonMusic_pressed():
 	BgmControl.option_music = not BgmControl.option_music
 	if BgmControl.option_music:
