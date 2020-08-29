@@ -1,6 +1,6 @@
 extends Control
 
-export var music:String = ""
+export(String, FILE) var music = ""
 export var next_scene:String = ""
 
 onready var slides = $Slides

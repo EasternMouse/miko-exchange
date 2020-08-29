@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/img/slides/slide5.jpg" type="Texture" id=3]
 
 [node name="CutScene" instance=ExtResource( 1 )]
-music = "res://assets/bgm/14_players_score_125.ogg"
+music = "res://assets/bgm/Mound_of_Life.ogg"
 next_scene = "res://src/scenes/MainMenu.tscn"
 
 [node name="Slide4" parent="Slides" index="0"]
