@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/img/Marisa.png" type="Texture" id=1]
 [ext_resource path="res://src/entities/Player.gd" type="Script" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/img/light.png" type="Texture" id=6]
 [ext_resource path="res://src/entities/HitboxShot.gd" type="Script" id=7]
-[ext_resource path="res://src/entities/LabelScore.gd" type="Script" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 40.8737
@@ -295,7 +294,6 @@ margin_right = 1090.0
 margin_bottom = 85.0
 custom_fonts/font = SubResource( 8 )
 text = "0"
-script = ExtResource( 8 )
 
 [node name="Damage" type="ColorRect" parent="CanvasLayer/UI"]
 anchor_right = 1.0

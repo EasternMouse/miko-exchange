@@ -10,7 +10,7 @@ func _ready():
 		BgmControl.start_playing(music)
 
 
-func _input(_event):
+func _unhandled_input(_event):
 	if Input.is_action_just_pressed("ui_accept"):
 		next()
 	elif Input.is_key_pressed(KEY_ESCAPE):
@@ -21,7 +21,7 @@ func next():
 	var slides_array = slides.get_children()
 	slides_array.invert()
 	for slide in slides_array:
-		if slide is Label:
+		if slide is ColorRect:
 			continue
 		if not slide.remove:
 			slide.remove = true

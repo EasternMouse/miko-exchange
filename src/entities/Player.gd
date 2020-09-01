@@ -17,6 +17,7 @@ const max_lives := 2
 
 var state = States.ALIVE
 var lives := max_lives
+var score := 0
 
 var input_velocity:Vector2
 var velocity:Vector2
@@ -39,11 +40,12 @@ var sounds = {
 	}
 
 onready var animation_player := $AnimationPlayer
-
+onready var label_score := $CanvasLayer/UI/Score/LabelScore
 
 func _ready():
 	node_bullets = get_tree().get_nodes_in_group("node_bullets")[0]
-
+	if not Events.connect("scored", self, "_add_score") == OK:
+		print("can't add signal: Scored in Player")
 
 func _unhandled_key_input(_event):
 	if state == States.DEAD:
@@ -141,6 +143,7 @@ func hurt():
 
 func die():
 	state = States.DEAD
+	Events.emit_signal("game_over", score)
 	play_sound("pichun")
 	$AnimationPlayer.play("die")
 	yield($AnimationPlayer, "animation_finished")
@@ -169,3 +172,9 @@ func play_sound(sound):
 	if BgmControl.option_sound:
 		$AudioStreamPlayer.stream = sounds[sound]
 		$AudioStreamPlayer.play()
+
+
+
+func _add_score(amount):
+	score += amount
+	label_score.text = str(score)

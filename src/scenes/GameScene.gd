@@ -6,7 +6,8 @@ onready var player = get_tree().get_nodes_in_group("player")[0]
 export(String, FILE) var music = ""
 
 func _ready():
-	
+
+	player.connect("player_died", self, "on_player_death")
 	
 	BgmControl.start_playing(music)
 

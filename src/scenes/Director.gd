@@ -19,34 +19,40 @@ var mobs = {
 
 var levels = {
 	0 : {
-		"pack" : ["Friend"],
+		"pack" : ["Mob"],
 		"burst" : 3,
 		"spawners" : 1,
+		"score_worth" : 0,
 	},
 	1 : {
 		"pack" : ["Spirit", "Spirit", "Spirit", "Spirit", "RedSpirit"],
 		"burst" : 15,
 		"spawners" : 3,
+		"score_worth" : 5000,
 	},
 	2 : {
 		"pack" : ["Spirit", "Spirit", "Spirit", "RedSpirit"],
 		"burst" : 20,
 		"spawners" : 4,
+		"score_worth" : 8000,
 	},
 	3 : {
 		"pack" : ["Spirit", "Spirit", "Spirit", "Spirit", "GreenSpirit"],
 		"burst" : 20,
 		"spawners" : 4,
+		"score_worth" : 10000,
 	},
 	4 : {
 		"pack" : ["RedSpirit", "GreenSpirit"],
 		"burst" : 8,
 		"spawners" : 4,
+		"score_worth" : 10000,
 		},
 	5 : {
 		"pack" : ["RedSpirit", "GreenSpirit"],
 		"burst" : 20,
 		"spawners" : 3,
+		"score_worth" : 20000,
 	},
 }
 
@@ -73,6 +79,7 @@ func process_new_level():
 		player.lives += 1
 		player.update_ui()
 		if current_level == 6:
+			Events.emit_signal("game_over", player.score)
 			SceneChanger.change_scene("res://src/scenes/CutScene3.tscn", 4)
 			return
 		for _i in range(levels[current_level]["spawners"]):
@@ -124,7 +131,6 @@ func tutorial_process_new_level():
 			tutorial_node.text = tr("CONTROLS_CIRCLE")
 			var spawner = create_spawner(0, Vector2(1400,1000))
 			spawner.get_node("AnimatedSprite").animation = "Friend"
-			spawner.score_worth = 0
 		6:
 			tutorial_node.text = tr("CONTROLS_MENU")
 			SceneChanger.change_scene("res://src/scenes/CutScene2.tscn", 3)
@@ -153,6 +159,7 @@ func create_spawner(level, position):
 	spawner.current_pack = levels[level]["pack"]
 	spawner.burst = levels[level]["burst"]
 	spawner.global_position = position
+	spawner.score_worth = levels[level]["score_worth"]
 	add_child(spawner)
 	spawner.connect("on_death", self, "on_child_death")
 	return spawner

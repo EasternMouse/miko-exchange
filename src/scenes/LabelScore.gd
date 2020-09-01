@@ -2,4 +2,4 @@ extends Label
 
 
 func _ready():
-	text = tr("VICTORY")
+	text = String(Events.score)

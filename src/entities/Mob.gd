@@ -13,7 +13,7 @@ export var max_velocity := Vector2(100, 120)
 export(AiType) var ai = AiType.CHASE
 export(ShootType) var shoot_type = ShootType.NONE
 export var shoot_cooldown := 1
-export var score_worth := 100
+export var score_worth := 0
 
 var player:KinematicBody2D
 var node_bullets
