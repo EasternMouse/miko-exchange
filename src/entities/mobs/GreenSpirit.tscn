@@ -8,6 +8,7 @@ max_lives = 10
 max_velocity = Vector2( 50, 50 )
 shoot_type = 4
 shoot_cooldown = 5
+score_worth = 300
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 0.34902, 1, 0.419608, 1 )

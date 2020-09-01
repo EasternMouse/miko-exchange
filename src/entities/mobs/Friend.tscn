@@ -5,3 +5,4 @@
 [node name="Friend" instance=ExtResource( 1 )]
 max_lives = 50
 ai = 0
+score_worth = 0

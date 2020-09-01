@@ -16,7 +16,7 @@ CREDITS_GAME,Game by EasternMouse,ゲーム : EasternMouse
 CREDITS_MUSIC,Music by Frogmask (visit SoundCloud),音楽 : Frogmask (SoundCloudへ)
 CONTROLS_FULLSCREEN,Alt+Enter : fullscreen,Alt+Enter : 全画面
 CONTROLS_MOVEMENT,Arrow keys : movement,方向キー : 移動
-CONTROLS_SHOOT,Z : Shoot,Z : ショット
+CONTROLS_SHOOT,Z (hold): Shoot,Z（長押し）: ショット
 CONTROLS_BURST,Z (release) : Burst fire,Z（離す） : バースト
 CONTROLS_FOCUS,Shift : Slow moving,Shift : 低速移動
 CONTROLS_CIRCLE,Fly around the gate in a circle to seal it,門の周りを円で絵がくと封印できます

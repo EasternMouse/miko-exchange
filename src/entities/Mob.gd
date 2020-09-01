@@ -13,6 +13,7 @@ export var max_velocity := Vector2(100, 120)
 export(AiType) var ai = AiType.CHASE
 export(ShootType) var shoot_type = ShootType.NONE
 export var shoot_cooldown := 1
+export var score_worth := 100
 
 var player:KinematicBody2D
 var node_bullets
@@ -98,6 +99,7 @@ func hurt(damage):
 
 
 func die():
+	Events.emit_signal("scored", score_worth)
 	is_dead = true
 	$CollisionShape2D.set_deferred("disabled", true)
 	$AnimationPlayer.play("death")

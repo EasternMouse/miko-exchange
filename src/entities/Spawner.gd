@@ -10,6 +10,7 @@ var director:Node
 var burst:int
 var current_pack:Array = ["Mob"]
 var is_dead := false
+var score_worth := 5000
 
 func _ready():
 	director = get_parent()
@@ -36,9 +37,11 @@ func _on_Timer_timeout():
 	if not is_dead:
 		burst_spawn()
 
+
 func die():
 	if not is_dead:
 		is_dead = true
+		Events.emit_signal("scored", score_worth)
 		$CollisionShape2D.set_deferred("disabled", true)
 		play_sound()
 		$AnimationPlayer.play("death")
@@ -50,6 +53,7 @@ func die():
 		get_parent().remove_child(self)
 		emit_signal("on_death")
 		queue_free()
+
 
 func play_sound():
 	if BgmControl.option_sound:

@@ -5,6 +5,7 @@ export var is_tutorial := false
 const MAP_START = Vector2(400,400)
 const MAP_EDGE = Vector2(3840,2160)-MAP_START
 
+var life_score := 5000
 
 var scene_spawner = preload("res://src/entities/Spawner.tscn")
 
@@ -18,7 +19,7 @@ var mobs = {
 
 var levels = {
 	0 : {
-		"pack" : ["Mob"],
+		"pack" : ["Friend"],
 		"burst" : 3,
 		"spawners" : 1,
 	},
@@ -68,6 +69,7 @@ func process_new_level():
 	if is_tutorial:
 		tutorial_process_new_level()
 	else:
+		Events.emit_signal("scored", player.lives * life_score)
 		player.lives += 1
 		player.update_ui()
 		if current_level == 6:
@@ -76,6 +78,7 @@ func process_new_level():
 		for _i in range(levels[current_level]["spawners"]):
 			var position = get_random_position()
 			create_spawner(current_level, position)
+
 
 func tutorial_process_new_level():
 	match current_level:
@@ -121,9 +124,11 @@ func tutorial_process_new_level():
 			tutorial_node.text = tr("CONTROLS_CIRCLE")
 			var spawner = create_spawner(0, Vector2(1400,1000))
 			spawner.get_node("AnimatedSprite").animation = "Friend"
+			spawner.score_worth = 0
 		6:
 			tutorial_node.text = tr("CONTROLS_MENU")
 			SceneChanger.change_scene("res://src/scenes/CutScene2.tscn", 3)
+
 
 func get_random_position() -> Vector2:
 	var _vector = Vector2.ZERO
@@ -158,6 +163,7 @@ func spawn_mob(spawner:Node2D, mob:String):
 	var clone = object_mob.instance()
 	clone.velocity = Vector2(1,0).rotated(randf()* 2 * PI) * 2000
 	spawner.add_child(clone)
+	spawner.get_parent().score_worth -= min(clone.score_worth * 1.5, spawner.get_parent().score_worth)
 
 
 func on_child_death():
