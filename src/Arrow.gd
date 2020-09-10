@@ -9,7 +9,7 @@ func _ready():
 func _process(_delta):
 	if is_inside_tree() and not is_queued_for_deletion():
 		visible = true
-		if is_instance_valid(target):
-			look_at(target.global_position)
-		else:
-			queue_free()
+		look_at(target.global_position)
+
+func die():
+	queue_free()

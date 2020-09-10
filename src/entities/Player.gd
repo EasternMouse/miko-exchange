@@ -162,9 +162,10 @@ func update_ui():
 		$CanvasLayer/UI/AnimationPlayer.play("heal")
 
 
-func make_arrow(target):
+func make_arrow(target:Node):
 	var arrow = scene_arrow.instance()
 	arrow.target = target
+	target.connect("on_death", arrow, "die")
 	$Arrows.add_child(arrow)
 
 

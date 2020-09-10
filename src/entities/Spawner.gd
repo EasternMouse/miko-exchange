@@ -20,8 +20,9 @@ func _ready():
 
 func burst_spawn():
 	for _i in range(burst):
-		spawn_random_mob()
-		yield(get_tree().create_timer(0.1), "timeout")
+		if not is_dead:
+			spawn_random_mob()
+			yield(get_tree().create_timer(0.1), "timeout")
 
 
 func spawn_random_mob():

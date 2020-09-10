@@ -41,7 +41,7 @@ func _physics_process(_delta):
 				collision.polygon = trail.points
 				area.add_child(collision)
 				add_child(area)
-				area.connect("body_entered", self, "spawner_detected")
+				area.connect("body_entered", self, "on_body_entered_Trail")
 				trail.clear_points()
 				var timer = Timer.new()
 				area.add_child(timer)
@@ -50,9 +50,10 @@ func _physics_process(_delta):
 				return
 
 
-func spawner_detected(body:Node):
+func on_body_entered_Trail(body:Node):
 	if body.is_in_group("spawner"):
 		body.die()
+
 
 static func get_segment_intersection(a, b, c, d):
 	var cd = d - c
