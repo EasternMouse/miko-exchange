@@ -1,6 +1,6 @@
 extends Node
 
-signal scored(amunt)
+signal scored(amount)
 signal game_over(new_score)
 
 var score:int
