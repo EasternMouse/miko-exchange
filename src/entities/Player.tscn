@@ -162,7 +162,6 @@ script = ExtResource( 2 )
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 6 )
 texture_scale = 2.0
-color = Color( 1, 0.0117647, 0.0117647, 1 )
 energy = 0.5
 
 [node name="RotationHelper" type="Node2D" parent="."]
