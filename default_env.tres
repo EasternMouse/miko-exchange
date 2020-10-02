@@ -9,5 +9,4 @@ fog_enabled = true
 fog_color = Color( 0.501961, 0.6, 0.701961, 1 )
 fog_depth_begin = 1.0
 tonemap_mode = 2
-tonemap_exposure = 0.3
 glow_enabled = true
