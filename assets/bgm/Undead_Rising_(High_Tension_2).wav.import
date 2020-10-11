@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Undead_Rising_(High_Tension_2).wav-ba0fee91f8eb3eb6206e3f453834e36c.sample"
+
+[deps]
+
+source_file="res://assets/bgm/Undead_Rising_(High_Tension_2).wav"
+dest_files=[ "res://.import/Undead_Rising_(High_Tension_2).wav-ba0fee91f8eb3eb6206e3f453834e36c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

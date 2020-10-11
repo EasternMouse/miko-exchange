@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/img/slides/slide6.jpg" type="Texture" id=5]
 
 [node name="CutScene2" instance=ExtResource( 1 )]
-music = "stop"
+music = "res://assets/bgm/Undead_Rising_(High_Tension_2).wav"
 next_scene = "res://src/scenes/GameScene.tscn"
 
 [node name="Slide4" parent="Slides" index="0"]
