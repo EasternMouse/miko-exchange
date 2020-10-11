@@ -76,7 +76,13 @@ func load_text():
 		$MarginContainer/VBoxContainer/HBoxContainer/ButtonSound.text = ("SE : " + tr("OFF"))
 
 
-func _on_ButtonCreditsMusic_pressed():
+func _on_ButtonCreditsMusicFrogMask_pressed():
 	OS.window_fullscreen = false
 	if OS.shell_open("https://soundcloud.com/frogmask") != OK:
+		print("Can't open website!")
+
+
+func _on_ButtonCreditsMusicMatthew_pressed():
+	OS.window_fullscreen = false
+	if OS.shell_open("https://opengameart.org/content/undead-rising") != OK:
 		print("Can't open website!")
