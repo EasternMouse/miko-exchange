@@ -161,7 +161,7 @@ alignment = 1
 margin_right = 441.0
 margin_bottom = 80.0
 focus_neighbour_top = NodePath("../../ButtonExit")
-focus_neighbour_right = NodePath("../ButtonCreditsMusic")
+focus_neighbour_right = NodePath("../ButtonCreditsMusicFrogMask")
 size_flags_horizontal = 7
 custom_fonts/font = SubResource( 2 )
 text = "CREDITS_GAME"
@@ -189,6 +189,7 @@ margin_right = 1800.0
 margin_bottom = 80.0
 focus_neighbour_left = NodePath("../ButtonCreditsGame")
 focus_neighbour_top = NodePath("../../ButtonExit")
+focus_neighbour_right = NodePath("../ButtonCreditsMusicMatthew")
 size_flags_horizontal = 7
 custom_fonts/font = SubResource( 2 )
 text = "CREDITS_MUSIC_FROGMASK"
@@ -198,7 +199,7 @@ icon = ExtResource( 6 )
 margin_left = 1804.0
 margin_right = 2680.0
 margin_bottom = 80.0
-focus_neighbour_left = NodePath("../ButtonCreditsGame")
+focus_neighbour_left = NodePath("../ButtonCreditsMusicFrogMask")
 focus_neighbour_top = NodePath("../../ButtonExit")
 size_flags_horizontal = 7
 custom_fonts/font = SubResource( 2 )
@@ -210,5 +211,6 @@ icon = ExtResource( 6 )
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic" to="." method="_on_ButtonMusic_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonLanguage" to="." method="_on_ButtonLanguage_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonExit" to="." method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits/ButtonCreditsGame" to="." method="_on_ButtonCreditsGame_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits/ButtonCreditsMusicFrogMask" to="." method="_on_ButtonCreditsMusicFrogMask_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits/ButtonCreditsMusicMatthew" to="." method="_on_ButtonCreditsMusicMatthew_pressed"]

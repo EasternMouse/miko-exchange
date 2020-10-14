@@ -86,3 +86,9 @@ func _on_ButtonCreditsMusicMatthew_pressed():
 	OS.window_fullscreen = false
 	if OS.shell_open("https://opengameart.org/content/undead-rising") != OK:
 		print("Can't open website!")
+
+
+func _on_ButtonCreditsGame_pressed():
+	OS.window_fullscreen = false
+	if OS.shell_open("https://easternmouse.itch.io") != OK:
+		print("Can't open website!")
