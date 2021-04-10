@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/img/background/Background/Sky(1.1).png" type="Texture" id=2]
@@ -6,14 +6,17 @@
 [ext_resource path="res://src/scenes/MainMenu.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/img/Globe.png" type="Texture" id=6]
+[ext_resource path="res://assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
 font_data = ExtResource( 5 )
+fallback/0 = ExtResource( 7 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -58,7 +61,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_right = 2680.0
-margin_bottom = 972.0
+margin_bottom = 1151.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/separation = 32
@@ -68,8 +71,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 83.0
 margin_right = 2680.0
-margin_bottom = 134.0
+margin_bottom = 217.0
 size_flags_vertical = 1
 text = "NAME"
 align = 1
@@ -78,25 +82,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
-margin_top = 166.0
+[node name="LabelControls" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 249.0
 margin_right = 2680.0
-margin_bottom = 196.0
-size_flags_vertical = 3
+margin_bottom = 292.0
+custom_fonts/font = SubResource( 1 )
+text = "CONTROLS_MAIN_MENU"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ButtonStart" parent="MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 228.0
+margin_top = 324.0
 margin_right = 2680.0
-margin_bottom = 362.0
+margin_bottom = 458.0
 focus_neighbour_bottom = NodePath("../ButtonSkipIntro")
 size_flags_vertical = 1
 text = "START"
 path = "res://src/scenes/CutScene.tscn"
 
 [node name="ButtonSkipIntro" parent="MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
-margin_top = 394.0
+margin_top = 490.0
 margin_right = 2680.0
-margin_bottom = 528.0
+margin_bottom = 624.0
 focus_neighbour_top = NodePath("../ButtonStart")
 focus_neighbour_bottom = NodePath("../HBoxContainer/ButtonSound")
 size_flags_vertical = 1
@@ -104,9 +113,9 @@ text = "SKIP_INTRO"
 path = "res://src/scenes/GameScene.tscn"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 560.0
+margin_top = 656.0
 margin_right = 2680.0
-margin_bottom = 694.0
+margin_bottom = 790.0
 custom_constants/separation = 32
 alignment = 1
 
@@ -143,18 +152,18 @@ size_flags_horizontal = 3
 text = "LANGUAGE"
 
 [node name="ButtonExit" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 726.0
+margin_top = 822.0
 margin_right = 2680.0
-margin_bottom = 860.0
+margin_bottom = 956.0
 focus_neighbour_top = NodePath("../HBoxContainer/ButtonSound")
 focus_neighbour_bottom = NodePath("../Credits/ButtonCreditsGame")
 mouse_filter = 2
 text = "EXIT"
 
 [node name="Credits" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 892.0
+margin_top = 988.0
 margin_right = 2680.0
-margin_bottom = 972.0
+margin_bottom = 1068.0
 alignment = 1
 
 [node name="ButtonCreditsGame" type="Button" parent="MarginContainer/VBoxContainer/Credits"]
@@ -207,6 +216,17 @@ text = "CREDITS_MUSIC_MATTHEW"
 icon = ExtResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="LanguagePopupMenu" type="PopupMenu" parent="."]
+margin_left = 48.0
+margin_top = 54.0
+margin_right = 2728.0
+margin_bottom = 1026.0
+popup_exclusive = true
+items = [ "English", null, 0, false, false, 0, 0, null, "", false, "日本語", null, 0, false, false, 1, 0, null, "", false, "Русский", null, 0, false, false, 2, 0, null, "", false, "中文", null, 0, false, false, 3, 0, null, "", false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonSound" to="." method="_on_ButtonSound_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic" to="." method="_on_ButtonMusic_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonLanguage" to="." method="_on_ButtonLanguage_pressed"]
@@ -214,3 +234,4 @@ icon = ExtResource( 6 )
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits/ButtonCreditsGame" to="." method="_on_ButtonCreditsGame_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits/ButtonCreditsMusicFrogMask" to="." method="_on_ButtonCreditsMusicFrogMask_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits/ButtonCreditsMusicMatthew" to="." method="_on_ButtonCreditsMusicMatthew_pressed"]
+[connection signal="id_pressed" from="LanguagePopupMenu" to="." method="_on_LanguagePopupMenu_id_pressed"]

@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=6 format=2]
+[gd_resource type="Theme" load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.803922, 0.301961, 0.301961, 1 )
@@ -14,6 +15,7 @@ bg_color = Color( 0.486275, 0.4, 0.4, 1 )
 [sub_resource type="DynamicFont" id=4]
 size = 96
 font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
 
 [resource]
 default_font = SubResource( 4 )

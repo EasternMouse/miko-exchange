@@ -28,11 +28,8 @@ func _on_ButtonExit_pressed():
 
 
 func _on_ButtonLanguage_pressed():
-	if TranslationServer.get_locale() == "en":
-		TranslationServer.set_locale("ja")
-	else:
-		TranslationServer.set_locale("en")
-	load_text()
+	$LanguagePopupMenu.popup()
+
 
 func _on_ButtonMusic_pressed():
 	BgmControl.option_music = not BgmControl.option_music
@@ -92,3 +89,12 @@ func _on_ButtonCreditsGame_pressed():
 	OS.window_fullscreen = false
 	if OS.shell_open("https://easternmouse.itch.io") != OK:
 		print("Can't open website!")
+
+
+func _on_LanguagePopupMenu_id_pressed(id: int) -> void:
+	match id:
+		0: TranslationServer.set_locale("en")
+		1: TranslationServer.set_locale("ja")
+		2: TranslationServer.set_locale("ru")
+		3: TranslationServer.set_locale("zh")
+	load_text()

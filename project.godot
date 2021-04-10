@@ -123,7 +123,7 @@ fullscreen={
 
 [locale]
 
-translations=PoolStringArray( "res://assets/text.en.translation", "res://assets/text.ja.translation" )
+translations=PoolStringArray( "res://assets/text.en.translation", "res://assets/text.ja.translation", "res://assets/text.ru.translation", "res://assets/text.zh.translation" )
 
 [rendering]
 
