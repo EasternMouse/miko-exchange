@@ -45,11 +45,6 @@ func _on_ButtonMusic_pressed():
 
 func _on_ButtonSound_pressed():
 	BgmControl.option_sound = not BgmControl.option_sound
-	if BgmControl.option_sound:
-		BgmControl.start_playing(music)
-		pass
-	else:
-		BgmControl.start_playing("")
 	
 	BgmControl.save_settings()
 	load_text()
@@ -98,3 +93,7 @@ func _on_LanguagePopupMenu_id_pressed(id: int) -> void:
 		2: TranslationServer.set_locale("ru")
 		3: TranslationServer.set_locale("zh")
 	load_text()
+
+
+func _on_LanguagePopupMenu_about_to_show() -> void:
+	pass # Replace with function body.
