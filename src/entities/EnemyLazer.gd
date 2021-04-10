@@ -13,3 +13,7 @@ func _on_EnemyBullet_area_entered(area):
 			if area.has_method("hurt"):
 				area.hurt()
 			queue_free()
+
+
+func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
+	queue_free()
