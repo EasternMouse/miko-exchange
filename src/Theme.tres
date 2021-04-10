@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
 [ext_resource path="res://assets/fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf" type="DynamicFontData" id=2]
@@ -12,9 +12,14 @@ bg_color = Color( 0.803922, 0.301961, 0.301961, 1 )
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.486275, 0.4, 0.4, 1 )
 
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.803922, 0.301961, 0.301961, 1 )
+expand_margin_left = 200.0
+
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.486275, 0.4, 0.4, 1 )
 border_color = Color( 0.729412, 0.729412, 0.729412, 1 )
+expand_margin_right = 100.0
 expand_margin_bottom = 1200.0
 
 [sub_resource type="StyleBoxFlat" id=7]
@@ -24,7 +29,9 @@ expand_margin_top = 50.0
 expand_margin_bottom = 50.0
 
 [sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0, 0, 0, 0.627451 )
+bg_color = Color( 0, 0, 0, 0.784314 )
+expand_margin_left = 200.0
+expand_margin_right = 200.0
 expand_margin_top = 200.0
 expand_margin_bottom = 200.0
 
@@ -50,17 +57,17 @@ PopupMenu/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 PopupMenu/colors/font_color_accel = Color( 0.701961, 0.701961, 0.701961, 1 )
 PopupMenu/colors/font_color_disabled = Color( 0.729412, 0.729412, 0.729412, 1 )
 PopupMenu/colors/font_color_hover = Color( 0.88, 0.88, 0.88, 1 )
-PopupMenu/constants/hseparation = 4
-PopupMenu/constants/vseparation = 4
+PopupMenu/constants/hseparation = 32
+PopupMenu/constants/vseparation = 32
 PopupMenu/fonts/font = null
 PopupMenu/icons/checked = null
 PopupMenu/icons/radio_checked = null
 PopupMenu/icons/radio_unchecked = null
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
-PopupMenu/styles/hover = SubResource( 2 )
+PopupMenu/styles/hover = SubResource( 9 )
 PopupMenu/styles/labeled_separator_left = SubResource( 5 )
 PopupMenu/styles/labeled_separator_right = SubResource( 7 )
 PopupMenu/styles/panel = SubResource( 8 )
-PopupMenu/styles/panel_disabled = SubResource( 3 )
+PopupMenu/styles/panel_disabled = null
 PopupMenu/styles/separator = null
