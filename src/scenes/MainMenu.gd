@@ -92,6 +92,7 @@ func _on_LanguagePopupMenu_id_pressed(id: int) -> void:
 		1: TranslationServer.set_locale("ja")
 		2: TranslationServer.set_locale("ru")
 		3: TranslationServer.set_locale("zh")
+	print("locale set: ", TranslationServer.get_locale())
 	load_text()
 
 

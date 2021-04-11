@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/img/background/Background/Sky(1.1).png" type="Texture" id=2]
@@ -7,16 +7,19 @@
 [ext_resource path="res://assets/fonts/Sawarabi_Mincho/SawarabiMincho-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/img/Globe.png" type="Texture" id=6]
 [ext_resource path="res://assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/fonts/Noto_Seriff_CS/NotoSerifSC-SemiBold.otf" type="DynamicFontData" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 5 )
 fallback/0 = ExtResource( 7 )
+fallback/1 = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
 font_data = ExtResource( 5 )
 fallback/0 = ExtResource( 7 )
+fallback/1 = ExtResource( 8 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -215,7 +218,6 @@ text = "CREDITS_MUSIC_MATTHEW"
 icon = ExtResource( 6 )
 
 [node name="LanguagePopupMenu" type="PopupMenu" parent="."]
-visible = true
 anchor_left = 0.05
 anchor_top = 0.025
 anchor_right = 1.0
