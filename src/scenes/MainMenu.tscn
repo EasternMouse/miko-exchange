@@ -53,6 +53,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LabelVersion" type="Label" parent="."]
+margin_left = 97.0
+margin_top = 54.0
+margin_right = 1825.0
+margin_bottom = 97.0
+custom_fonts/font = SubResource( 1 )
+text = "v. 1.2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_left = 0.025
 anchor_top = 0.05
@@ -218,7 +229,6 @@ text = "CREDITS_MUSIC_MATTHEW"
 icon = ExtResource( 6 )
 
 [node name="LanguagePopupMenu" type="PopupMenu" parent="."]
-visible = true
 anchor_left = 0.05
 anchor_top = 0.025
 anchor_right = 1.0
