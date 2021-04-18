@@ -129,9 +129,15 @@ func tutorial_process_new_level():
 			on_child_death()
 		5:
 			tutorial_node.text = tr("CONTROLS_CIRCLE")
+			var tutorial_background = get_parent().get_node("Tutorial/ColorRectBackground") as ColorRect
+			tutorial_background.visible = true
+			tutorial_background.connect("next", self, "on_child_death")
+			tutorial_background.pause_mode = Node.PAUSE_MODE_INHERIT
+		6:
+			tutorial_node.text = tr("CONTROLS_CIRCLE")
 			var spawner = create_spawner(0, Vector2(1400,1000))
 			spawner.get_node("AnimatedSprite").animation = "Friend"
-		6:
+		7:
 			tutorial_node.text = tr("CONTROLS_MENU")
 			SceneChanger.change_scene("res://src/scenes/CutScene2.tscn", 3)
 
