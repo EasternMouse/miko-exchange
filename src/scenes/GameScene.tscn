@@ -84,9 +84,7 @@ script = ExtResource( 4 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 3235.6, 1724.4 )
 
-[node name="Bullets" type="Node2D" parent="." groups=[
-"node_bullets",
-]]
+[node name="Bullets" type="Node2D" parent="." groups=["node_bullets"]]
 position = Vector2( 0, -1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -303,4 +301,5 @@ __meta__ = {
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 8 )
+
 [connection signal="pressed" from="PauseScreen/ColorRect/MarginContainer/VBoxContainer/ButtonContinue" to="." method="_on_ButtonContinue_pressed"]

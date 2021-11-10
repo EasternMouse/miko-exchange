@@ -239,6 +239,7 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonSound" to="." method="_on_ButtonSound_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonMusic" to="." method="_on_ButtonMusic_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ButtonLanguage" to="." method="_on_ButtonLanguage_pressed"]
